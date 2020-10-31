@@ -68,22 +68,21 @@ const returnRandBase = () => {
 
   const arrayOfpAequor = [];
 
-  for (let index = 0; index < 30; index++) {
+  const orgsLikelyToSurvive = [];
+  let idCounter = 1;
 
-    arrayOfpAequor.push(pAequorFactory(index + 1,mockUpStrand()));
-    console.log(arrayOfpAequor[index].specimenNum + ':' + arrayOfpAequor[index].dna); 
-    if(arrayOfpAequor[index].willLikelySurvive())
+  //Changed from a for loop
+  while (orgsLikelyToSurvive.length < 30) {
+    let newOrg = pAequorFactory(idCounter, mockUpStrand());
+    if(newOrg.willLikelySurvive())
     {
-        console.log(`specimen #${arrayOfpAequor[index].specimenNum} is likely to survive`);
+        orgsLikelyToSurvive.push(newOrg);
+        console.log(orgsLikelyToSurvive[orgsLikelyToSurvive.length -1].specimenNum + ':' + orgsLikelyToSurvive[orgsLikelyToSurvive.length -1].dna); 
+        idCounter++;
 
     }
-    else {
-        console.log(`specimen #${arrayOfpAequor[index].specimenNum} is NOT likely to survive`);
-
-    }
-      
-      
   }
+
 
  
 /* 
