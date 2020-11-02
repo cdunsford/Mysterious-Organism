@@ -66,7 +66,7 @@ const returnRandBase = () => {
 
   };
 
-  const arrayOfpAequor = [];
+  const arrOfpAequor = [];
 
   const orgsLikelyToSurvive = [];
   let idCounter = 1;
