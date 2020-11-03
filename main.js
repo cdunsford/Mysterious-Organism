@@ -66,19 +66,19 @@ const returnRandBase = () => {
 
   };
 
-  const arrOfpAequor = [];
+ 
 
   const orgsLikelyToSurvive = [];
-  let idCounter = 1;
+  let organismID = 1;
 
   //Changed from a for loop
   while (orgsLikelyToSurvive.length < 30) {
-    let newOrg = pAequorFactory(idCounter, mockUpStrand());
+    let newOrg = pAequorFactory(organismID, mockUpStrand());
     if(newOrg.willLikelySurvive())
     {
         orgsLikelyToSurvive.push(newOrg);
         console.log(orgsLikelyToSurvive[orgsLikelyToSurvive.length -1].specimenNum + ':' + orgsLikelyToSurvive[orgsLikelyToSurvive.length -1].dna); 
-        idCounter++;
+        organismID++;
 
     }
   }
