@@ -66,7 +66,7 @@ const returnRandBase = () => {
 
   };
 
- 
+
 
   const orgsLikelyToSurvive = [];
   let organismID = 1;
